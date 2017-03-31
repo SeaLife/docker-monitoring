@@ -3,7 +3,13 @@
 ## How to build this image
 
 ```bash
-docker build -t sealife/monitoring .
+docker build -t sealife/docker-monitoring .
+```
+
+## How to get the Build from DockerHUB
+
+```bash
+docker pull sealife/docker-monitoring:latest
 ```
 
 ## How to use this Build
@@ -57,7 +63,7 @@ default-groups-enabled=true
 now you can run the docker container with:
 
 ```bash
-docker run --name monserv -d -p 2001:80 -v /applications/monitoring:/data sealife/monitoring
+docker run --name monserv -h example.org -d -p 2001:80 -v /applications/monitoring:/data sealife/docker-monitoring
 ```
 
 go to your browser and open
