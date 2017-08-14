@@ -24,7 +24,7 @@ if [ -f /var/www/html/index.php ]; then
 else
 	rm -rf *
 
-	git clone http://git.r3ktm8.de/SeaLife/Framework.git .
+	git clone https://git.r3ktm8.de/php-framework/Core.git .
 
 	sh setup.sh
 
@@ -39,17 +39,17 @@ ln -s /data/config.ini config.ini
 
 cd /var/www/html/addons
 
-if [ ! -d MonitoringAddon ]; then
-	git clone http://git.r3ktm8.de/SeaLife/MonitoringAddon.git
+if [ ! -d Monitoring ]; then
+	git clone https://git.r3ktm8.de/php-framework/Monitoring.git
 else
-	cd MonitoringAddon
+	cd Monitoring
 	git pull
 fi
 
 cd /var/www/html/addons
 
 if [ ! -d PermissionSystem ]; then
-        git clone http://git.r3ktm8.de/Official/PermissionSystem.git
+        git clone https://git.r3ktm8.de/php-framework/PermissionSystem.git
 else
         cd PermissionSystem
         git pull
