@@ -26,8 +26,6 @@ else
 
 	git clone https://git.r3ktm8.de/php-framework/Core.git .
 
-	sh setup.sh
-
 	git submodule init
 	git submodule update
 
@@ -57,6 +55,13 @@ fi
 
 echo "$(date) - Updated System ...."
 
+cd /var/www/html
+sh setup.sh
 
 # Start System ...
+
+if [ ! -f /var/www/html/index.php ]; then
+	exit 1
+fi
+
 /start.sh
