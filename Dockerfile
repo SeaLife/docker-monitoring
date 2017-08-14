@@ -9,7 +9,7 @@ RUN apt-get install -y libapache2-mod-php7.0
 RUN apt-get install -y git
 RUN apt-get install -y php7.0-mysql
 RUN apt-get install -y cron
-RUN apt-get install -y curl php7.0-curl
+RUN apt-get install -y curl php7.0-curl wget
 
 COPY start.sh /
 COPY cron-monitoring /etc/cron.d/cron-monitoring
