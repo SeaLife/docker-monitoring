@@ -25,6 +25,8 @@ else
 	rm -rf *
 
 	git clone https://git.r3ktm8.de/php-framework/Core.git .
+	
+	sh setup.sh
 
 	git submodule init
 	git submodule update
